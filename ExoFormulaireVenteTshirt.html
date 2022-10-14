@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de tshirt</title>
+    <style>
+        fieldset {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        input:invalid {
+            border: red solid 3px;
+        }
+        
+        #tsize{
+            display: block ruby;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="" method="post">
+
+        <fieldset>
+            <legend>Client</legend>
+
+            <label for="i1">Nom et prénom:</label>
+            <input type="text" id="i1" name="nom et prénom" placeholder="NOM et prénom"
+                pattern="^[A-Z]+[[\s]{1}[A-Z]{1}[a-z]+$" />
+
+                
+            <br>
+            <label for="i3">Adresse :</label>
+            <input type="text" id="i3" name="adresse"/>
+            <br>
+            <label for="i4">Code postal :</label>
+            <input type="text" id="i4" name="code postal" pattern="^[0-9]{5}$" />
+            <br>
+            <label for="i5">Pays :</label>
+            <input type="text" id="i5" name="Pays" value="France" readonly />
+        </fieldset>
+
+        <br>
+        <br>
+
+        <fieldset>
+
+            <legend>Commande</legend>
+            <label for="C1">Modèle :</label>
+            <input type="text" value="Road 66" />
+            <br>
+            <label for="C2">Taille :</label><br>
+            <input type="range" list="tsize" min="1" max="4" />
+                <datalist id="tsize">
+                    <option value="s"label="S"></option>
+                    <option value="M"label="  M"></option>
+                    <option value="L"label="  L"></option>
+                    <option value="XL"label="  XL"></option>
+                </datalist>
+            
+            <br>
+            <label for="c3">Quantité :</label>
+            <input type="number" value="1" min="1" max="165" step="3">
+        </fieldset>
+
+        <br>
+        <br>
+        <input type="submit" value="Commander" />
+
+        <input type="reset" value="Recommencer" />
+    </form>
+
+
+</body>
+
+</html>
